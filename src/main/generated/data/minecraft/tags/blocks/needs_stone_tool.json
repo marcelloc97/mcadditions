@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mcadditions:raw_ruby_block",
+    "mcadditions:ruby_block",
+    "mcadditions:ruby_ore",
+    "mcadditions:nether_ruby_ore"
+  ]
+}

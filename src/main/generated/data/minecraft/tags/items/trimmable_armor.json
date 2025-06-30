@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mcadditions:ruby_helmet",
+    "mcadditions:ruby_chestplate",
+    "mcadditions:ruby_leggings",
+    "mcadditions:ruby_boots"
+  ]
+}

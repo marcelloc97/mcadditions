@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mcadditions:raw_ruby_block",
+    "mcadditions:ruby_block",
+    "mcadditions:ruby_ore",
+    "mcadditions:deepslate_ruby_ore",
+    "mcadditions:nether_ruby_ore",
+    "mcadditions:end_stone_ruby_ore"
+  ]
+}

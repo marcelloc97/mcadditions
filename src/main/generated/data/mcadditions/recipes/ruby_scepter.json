@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "mcadditions:ruby"
+    }
+  },
+  "pattern": [
+    "  R",
+    " I ",
+    "I  "
+  ],
+  "result": {
+    "item": "mcadditions:ruby_scepter"
+  },
+  "show_notification": true
+}

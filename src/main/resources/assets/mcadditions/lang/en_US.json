@@ -1,0 +1,45 @@
+{
+  "itemgroup.mcadditions": "MC Additions",
+
+  "item.mcadditions.ore_detector": "Ore Detector",
+  "tooltip.mcadditions.ore_detector.line1": "Detects almost all ores below the block when used.",
+  "tooltip.mcadditions.ore_detector.line2": "Has a range of 32 blocks.",
+
+  "item.mcadditions.ruby_scepter": "Ruby Scepter",
+
+  "item.mcadditions.ruby_sword": "Ruby Sword",
+  "item.mcadditions.ruby_pickaxe": "Ruby Pickaxe",
+  "item.mcadditions.ruby_axe": "Ruby Axe",
+  "item.mcadditions.ruby_shovel": "Ruby Shovel",
+  "item.mcadditions.ruby_hoe": "Ruby Hoe",
+
+  "item.mcadditions.ruby_helmet": "Ruby Helmet",
+  "item.mcadditions.ruby_chestplate": "Ruby Chestplate",
+  "item.mcadditions.ruby_leggings": "Ruby Leggings",
+  "item.mcadditions.ruby_boots": "Ruby Boots",
+
+  "item.mcadditions.ruby": "Ruby",
+  "item.mcadditions.raw_ruby": "Raw Ruby",
+
+  "block.mcadditions.ruby_block": "Block of Ruby",
+  "block.mcadditions.ruby_stairs": "Ruby Stairs",
+  "block.mcadditions.ruby_slab": "Ruby Slab",
+  "block.mcadditions.ruby_button": "Ruby Button",
+  "block.mcadditions.ruby_pressure_plate": "Ruby Pressure Plate",
+  "block.mcadditions.ruby_fence": "Ruby Fence",
+  "block.mcadditions.ruby_fence_gate": "Ruby Fence Gate",
+  "block.mcadditions.ruby_wall": "Ruby Wall",
+  "block.mcadditions.ruby_door": "Ruby Door",
+  "block.mcadditions.ruby_trapdoor": "Ruby Trapdoor",
+
+  "block.mcadditions.raw_ruby_block": "Block of Raw Ruby",
+
+  "block.mcadditions.ruby_ore": "Ruby Ore",
+  "block.mcadditions.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.mcadditions.nether_ruby_ore": "Nether Ruby Ore",
+  "block.mcadditions.end_stone_ruby_ore": "End Stone Ruby Ore",
+
+  "key.mcadditions.open_menu": "Open Menu",
+
+  "category.mcadditions.test": "Test"
+}

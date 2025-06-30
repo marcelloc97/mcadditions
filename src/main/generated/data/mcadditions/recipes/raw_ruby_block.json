@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": {
+      "item": "mcadditions:raw_ruby"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "SR ",
+    "RS ",
+    "   "
+  ],
+  "result": {
+    "item": "mcadditions:raw_ruby_block"
+  },
+  "show_notification": true
+}

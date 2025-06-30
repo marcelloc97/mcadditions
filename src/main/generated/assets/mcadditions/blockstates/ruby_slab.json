@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mcadditions:block/ruby_slab"
+    },
+    "type=double": {
+      "model": "mcadditions:block/ruby_block"
+    },
+    "type=top": {
+      "model": "mcadditions:block/ruby_slab_top"
+    }
+  }
+}

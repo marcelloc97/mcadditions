@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": {
+      "item": "mcadditions:ruby"
+    }
+  },
+  "pattern": [
+    "   ",
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "item": "mcadditions:ruby_trapdoor"
+  },
+  "show_notification": true
+}
