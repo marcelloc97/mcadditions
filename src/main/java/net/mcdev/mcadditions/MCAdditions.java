@@ -7,6 +7,7 @@ import net.mcdev.mcadditions.block.MCABlocks;
 import net.mcdev.mcadditions.item.MCAItemGroups;
 import net.mcdev.mcadditions.item.MCAItems;
 import net.mcdev.mcadditions.util.MCALootTableModifiers;
+import net.mcdev.mcadditions.world.gen.MCAWorldGeneration;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.text.Text;
 import org.slf4j.Logger;
@@ -27,6 +28,8 @@ public class MCAdditions implements ModInitializer {
 
 		MCALootTableModifiers.modifyLootTables();
 
+		MCAWorldGeneration.generateMCAWorldGen();
+
 		CommandRegistrationCallback.EVENT.register(
 			((dispatcher, registryAccess, registrationEnvironment) -> {
 				dispatcher.register(CommandManager.literal("slk").executes(context -> {
@@ -37,14 +40,18 @@ public class MCAdditions implements ModInitializer {
 		);
 	}
 
-	// TODO: permitir adicionar líquido de poção nos caldeirões.
+	// TODO: permitir adicionar líquido de poção nos caldeirões (talvez? Create já faz isso).
 	// TODO: além da geração de ruby no mundo (geodos), ter também mobs que dropam ruby.
-	// TODO: criar utilidade para a Dark Essence (provável ser atrelado com o extrator de essência de mob.
+	// TODO: criar utilidade para a Dark Essence (provável ser atrelado com o extrator de essência de mob. (feito, mas precisa de revisão)
+	// TODO: Criar receita do item Name Tag
 
 	/*
 		TODO: criar um item que serve como extrator de essência de mobs, com essa essência, é possível juntar com um
-		      Spawner criado numa Crafting Table para definir um Spawner com aquele monstro específico.
+		 	  ovo de galinha para criar um ovo de monstro com a essência do mob específico.
+		      O Spawner pode ser criado numa Crafting Table.
+		      Para definir um Spawner com um monstro específico, basta interagir com o ovo de monstro na mão (esquerda ou direita).
 		      O Spawner pode ser colocado e quebrado sem necessidade do uso de Silk Touch na picareta.
+
 	*/
 
 	/*

@@ -36,22 +36,12 @@ public class MCALootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(
             MCABlocks.RUBY_ORE,
-            copperLikeOreDrops(MCABlocks.RUBY_ORE, MCAItems.RAW_RUBY, 2, 5)
+            copperLikeOreDrops(MCABlocks.RUBY_ORE, MCAItems.RAW_RUBY, 1, 3)
         );
 
         addDrop(
             MCABlocks.DEEPSLATE_RUBY_ORE,
-            copperLikeOreDrops(MCABlocks.DEEPSLATE_RUBY_ORE, MCAItems.RAW_RUBY, 4, 8)
-        );
-
-        addDrop(
-            MCABlocks.NETHER_RUBY_ORE,
-            copperLikeOreDrops(MCABlocks.RUBY_ORE, MCAItems.RAW_RUBY, 2, 5)
-        );
-
-        addDrop(
-            MCABlocks.END_STONE_RUBY_ORE,
-            copperLikeOreDrops(MCABlocks.RUBY_ORE, MCAItems.RAW_RUBY, 6, 12)
+            copperLikeOreDrops(MCABlocks.DEEPSLATE_RUBY_ORE, MCAItems.RAW_RUBY, 2, 4)
         );
     }
 

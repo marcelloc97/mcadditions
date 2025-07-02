@@ -94,8 +94,6 @@ public class OreDetectorItem extends Item {
         return (
             state.getBlock() == MCABlocks.RUBY_ORE ||
             state.getBlock() == MCABlocks.DEEPSLATE_RUBY_ORE ||
-            state.getBlock() == MCABlocks.NETHER_RUBY_ORE ||
-            state.getBlock() == MCABlocks.END_STONE_RUBY_ORE ||
             state.getBlock() == Blocks.COAL_ORE ||
             state.getBlock() == Blocks.DEEPSLATE_COAL_ORE ||
             state.getBlock() == Blocks.COPPER_ORE ||

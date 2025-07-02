@@ -35,8 +35,6 @@ public class MCAModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(MCABlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(MCABlocks.DEEPSLATE_RUBY_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(MCABlocks.NETHER_RUBY_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(MCABlocks.END_STONE_RUBY_ORE);
     }
 
     @Override

@@ -20,8 +20,7 @@ import java.util.function.Consumer;
 public class MCARecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> RUBY_SMELTABLES = List.of(
         MCAItems.RAW_RUBY,
-        MCABlocks.RUBY_ORE, MCABlocks.DEEPSLATE_RUBY_ORE,
-        MCABlocks.NETHER_RUBY_ORE, MCABlocks.END_STONE_RUBY_ORE
+        MCABlocks.RUBY_ORE, MCABlocks.DEEPSLATE_RUBY_ORE
     );
 
     public MCARecipeProvider(FabricDataOutput output) {
@@ -288,5 +287,57 @@ public class MCARecipeProvider extends FabricRecipeProvider {
 //            .criterion(hasItem(Blocks.SPAWNER), conditionsFromItem(Blocks.SPAWNER))
 //            .criterion(hasItem(MCAItems.DARK_ESSENCE), conditionsFromItem(MCAItems.DARK_ESSENCE))
 //            .offerTo(exporter, new Identifier(getRecipeName(Items.STRING)));
+
+
+        // Saddle
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.SADDLE)
+            .pattern(" L ")
+            .pattern("L L")
+            .pattern("I I")
+            .input('L', Items.LEATHER)
+            .input('I', Items.IRON_INGOT)
+            .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
+            .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+            .offerTo(exporter, new Identifier(getRecipeName(Items.SADDLE)));
+
+        // Leather Horse Armor
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LEATHER_HORSE_ARMOR)
+//            .pattern("  L")
+//            .pattern("LWL")
+//            .pattern("LLL")
+//            .input('L', Items.LEATHER)
+//            .input('W', ItemTags.WOOL)
+//            .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
+//            .offerTo(exporter, new Identifier(getRecipeName(Items.LEATHER_HORSE_ARMOR)));
+
+        // Iron Horse Armor
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.IRON_HORSE_ARMOR)
+            .pattern("  I")
+            .pattern("ILI")
+            .pattern("III")
+            .input('I', Items.IRON_INGOT)
+            .input('L', Items.LEATHER)
+            .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+            .offerTo(exporter, new Identifier(getRecipeName(Items.IRON_HORSE_ARMOR)));
+
+        // Gold Horse Armor
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.GOLDEN_HORSE_ARMOR)
+            .pattern("  G")
+            .pattern("GLG")
+            .pattern("GGG")
+            .input('G', Items.GOLD_INGOT)
+            .input('L', Items.LEATHER)
+            .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+            .offerTo(exporter, new Identifier(getRecipeName(Items.GOLDEN_HORSE_ARMOR)));
+
+        // Diamond Horse Armor
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.DIAMOND_HORSE_ARMOR)
+            .pattern("  D")
+            .pattern("DLD")
+            .pattern("DDD")
+            .input('D', Items.DIAMOND)
+            .input('L', Items.LEATHER)
+            .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+            .offerTo(exporter, new Identifier(getRecipeName(Items.DIAMOND_HORSE_ARMOR)));
     }
 }

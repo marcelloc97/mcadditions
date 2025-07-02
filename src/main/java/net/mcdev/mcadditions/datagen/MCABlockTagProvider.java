@@ -29,8 +29,6 @@ public class MCABlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(MCATags.Blocks.ORE_DETECTOR_DETECTABLE_BLOCKS)
             .add(MCABlocks.RUBY_ORE)
             .add(MCABlocks.DEEPSLATE_RUBY_ORE)
-            .add(MCABlocks.NETHER_RUBY_ORE)
-            .add(MCABlocks.END_STONE_RUBY_ORE)
             .forceAddTag(BlockTags.COPPER_ORES)
             .forceAddTag(BlockTags.IRON_ORES)
             .forceAddTag(BlockTags.GOLD_ORES)
@@ -43,18 +41,14 @@ public class MCABlockTagProvider extends FabricTagProvider.BlockTagProvider {
             .add(MCABlocks.RAW_RUBY_BLOCK)
             .add(MCABlocks.RUBY_BLOCK)
             .add(MCABlocks.RUBY_ORE)
-            .add(MCABlocks.DEEPSLATE_RUBY_ORE)
-            .add(MCABlocks.NETHER_RUBY_ORE)
-            .add(MCABlocks.END_STONE_RUBY_ORE);
+            .add(MCABlocks.DEEPSLATE_RUBY_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
             .add(MCABlocks.RAW_RUBY_BLOCK)
             .add(MCABlocks.RUBY_BLOCK)
             .add(MCABlocks.RUBY_ORE)
-            .add(MCABlocks.NETHER_RUBY_ORE);
+            .add(MCABlocks.DEEPSLATE_RUBY_ORE);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-            .add(MCABlocks.DEEPSLATE_RUBY_ORE)
-            .add(MCABlocks.END_STONE_RUBY_ORE);
+//        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
     }
 }

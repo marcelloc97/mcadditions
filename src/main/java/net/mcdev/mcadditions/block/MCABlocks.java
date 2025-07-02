@@ -18,8 +18,6 @@ public class MCABlocks {
 
     public static final Block RUBY_ORE;
     public static final Block DEEPSLATE_RUBY_ORE;
-    public static final Block NETHER_RUBY_ORE;
-    public static final Block END_STONE_RUBY_ORE;
 
     public static final Block RUBY_STAIRS;
     public static final Block RUBY_SLAB;
@@ -135,8 +133,9 @@ public class MCABlocks {
             new ExperienceDroppingBlock(
                 FabricBlockSettings
                     .copyOf(Blocks.STONE)
-                    .strength(2f),
-                UniformIntProvider.create(2, 5)
+                    .strength(2f)
+                    .luminance(6),
+                UniformIntProvider.create(1, 3)
             )
         );
 
@@ -145,28 +144,9 @@ public class MCABlocks {
             new ExperienceDroppingBlock(
                 FabricBlockSettings
                     .copyOf(Blocks.DEEPSLATE)
-                    .strength(4f),
-                UniformIntProvider.create(3, 7)
-            )
-        );
-
-        NETHER_RUBY_ORE = registerBlock(
-            "nether_ruby_ore",
-            new ExperienceDroppingBlock(
-                FabricBlockSettings
-                    .copyOf(Blocks.NETHERRACK)
-                    .strength(1.5f),
-                UniformIntProvider.create(1, 4)
-            )
-        );
-
-        END_STONE_RUBY_ORE = registerBlock(
-            "end_stone_ruby_ore",
-            new ExperienceDroppingBlock(
-                FabricBlockSettings
-                    .copyOf(Blocks.END_STONE)
-                    .strength(4f),
-                UniformIntProvider.create(4, 8)
+                    .strength(4f)
+                    .luminance(6),
+                UniformIntProvider.create(2, 4)
             )
         );
         //endregion

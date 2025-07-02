@@ -44,8 +44,6 @@ public class MCAItemGroups {
 
                     entries.add(MCABlocks.RUBY_ORE);
                     entries.add(MCABlocks.DEEPSLATE_RUBY_ORE);
-                    entries.add(MCABlocks.NETHER_RUBY_ORE);
-                    entries.add(MCABlocks.END_STONE_RUBY_ORE);
 
                     entries.add(MCAItems.RUBY_SWORD);
                     entries.add(MCAItems.RUBY_PICKAXE);
