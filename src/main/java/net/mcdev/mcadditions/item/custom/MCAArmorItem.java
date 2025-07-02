@@ -23,8 +23,8 @@ public class MCAArmorItem extends ArmorItem {
             .put(
                 MCAArmorMaterials.RUBY,
                 new StatusEffectInstance(
-                    StatusEffects.SATURATION,
-                    MCAUtils.getTicksBySeconds(10), 0,
+                    StatusEffects.HASTE,
+                    MCAUtils.getTicksBySeconds(10), 1,
                     false, false, true
                 )
             )
