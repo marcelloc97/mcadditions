@@ -44,13 +44,15 @@ public class MCAModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(MCAItems.DARK_ESSENCE, Models.GENERATED);
 
-        itemModelGenerator.register(MCAItems.ORE_DETECTOR, Models.GENERATED);
 
         itemModelGenerator.register(MCAItems.RUBY_SWORD, Models.HANDHELD);
         itemModelGenerator.register(MCAItems.RUBY_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(MCAItems.RUBY_AXE, Models.HANDHELD);
         itemModelGenerator.register(MCAItems.RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(MCAItems.RUBY_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(MCAItems.ORE_DETECTOR, Models.HANDHELD);
+        itemModelGenerator.register(MCAItems.ESSENCE_EXTRACTOR, Models.HANDHELD);
 
         itemModelGenerator.registerArmor(((ArmorItem) MCAItems.RUBY_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) MCAItems.RUBY_CHESTPLATE));

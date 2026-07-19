@@ -1,14 +1,15 @@
 package net.mcdev.mcadditions.item;
 
+
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.mcdev.mcadditions.MCAdditions;
-import net.mcdev.mcadditions.block.MCABlocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.text.Text;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.mcdev.mcadditions.MCAdditions;
+import net.mcdev.mcadditions.block.MCABlocks;
 
 public class MCAItemGroups {
     public static final ItemGroup RUBY_GROUP;
@@ -19,14 +20,14 @@ public class MCAItemGroups {
             FabricItemGroup.builder()
                 .displayName(Text.translatable("itemgroup.mcadditions"))
                 .icon(() -> new ItemStack(MCAItems.RUBY_SCEPTER)).entries(((displayContext, entries) -> {
-                    entries.add(MCAItems.ORE_DETECTOR);
-
                     entries.add(MCAItems.RAW_RUBY);
                     entries.add(MCAItems.RUBY);
 
                     entries.add(MCAItems.DARK_ESSENCE);
 
+                    entries.add(MCAItems.ORE_DETECTOR);
                     entries.add(MCAItems.RUBY_SCEPTER);
+                    entries.add(MCAItems.ESSENCE_EXTRACTOR);
 
                     entries.add(MCABlocks.RUBY_BLOCK);
 

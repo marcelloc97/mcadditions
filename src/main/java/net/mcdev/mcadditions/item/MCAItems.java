@@ -1,14 +1,17 @@
 package net.mcdev.mcadditions.item;
 
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.mcdev.mcadditions.item.custom.EssenceExtractor;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
+import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.mcdev.mcadditions.MCAdditions;
 import net.mcdev.mcadditions.item.custom.MCAArmorItem;
 import net.mcdev.mcadditions.item.custom.OreDetectorItem;
 import net.mcdev.mcadditions.item.custom.RubyScepter;
-import net.minecraft.item.*;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 public class MCAItems {
     //region General items
@@ -32,6 +35,11 @@ public class MCAItems {
     public static final Item RUBY_SCEPTER = registerItem(
         "ruby_scepter",
         new RubyScepter(new FabricItemSettings().maxCount(1).maxDamage(8))
+    );
+
+    public static final Item ESSENCE_EXTRACTOR = registerItem(
+        "essence_extractor",
+        new EssenceExtractor(new FabricItemSettings().maxCount(1))
     );
 
     public static final Item RUBY_SWORD = registerItem(

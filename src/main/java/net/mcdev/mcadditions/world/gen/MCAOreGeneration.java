@@ -11,5 +11,10 @@ public class MCAOreGeneration {
             BiomeSelectors.foundInOverworld(),
             GenerationStep.Feature.UNDERGROUND_ORES, MCAPlacedFeatures.RUBY_ORE_PLACED_KEY
         );
+
+//        BiomeModifications.addFeature(
+//            BiomeSelectors.foundInOverworld(),
+//            GenerationStep.Feature.UNDERGROUND_ORES, MCAPlacedFeatures.RUBY_GEODE_PLACED_KEY
+//        );
     }
 }

@@ -9,13 +9,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 public class MCAPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = registerKey("ruby_ore_placed");
+//    public static final RegistryKey<PlacedFeature> RUBY_GEODE_PLACED_KEY = registerKey("ruby_geode_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -31,6 +32,15 @@ public class MCAPlacedFeatures {
                 HeightRangePlacementModifier.trapezoid(YOffset.fixed(-40), YOffset.fixed(20))
             )
         );
+
+//        PlacedFeatures.register(
+//            context, RUBY_GEODE_PLACED_KEY,
+//            configuredFeatureRegistryEntryLookup.getOrThrow(MCAConfiguredFeatures.RUBY_GEODE_KEY),
+//            RarityFilterPlacementModifier.of(42),
+//            SquarePlacementModifier.of(),
+//            HeightRangePlacementModifier.uniform(YOffset.aboveBottom(6), YOffset.aboveBottom(50)),
+//            BiomePlacementModifier.of()
+//        );
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

@@ -1,16 +1,18 @@
 package net.mcdev.mcadditions.block;
 
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.mcdev.mcadditions.MCAdditions;
-import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
+import net.minecraft.block.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.sound.BlockSoundGroup;
+import net.mcdev.mcadditions.MCAdditions;
+
 
 public class MCABlocks {
     public static final Block RUBY_BLOCK;

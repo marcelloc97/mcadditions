@@ -1,9 +1,8 @@
 package net.mcdev.mcadditions.item.custom;
 
-import net.mcdev.mcadditions.block.MCABlocks;
+import net.mcdev.mcadditions.util.MCATags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -38,25 +37,6 @@ public class OreDetectorItem extends Item {
 
             for (int y = 0; y <= positionUsed.getY() + detectionRange; y++) {
                 BlockState stateY = context.getWorld().getBlockState(positionUsed.down(y));
-                BlockPos nextPosY = positionUsed.down(y + 1);
-
-                for (int x = 0; x <= nextPosY.getX() + (detectionRange - 1); x++) {
-                    BlockState stateXEast = context.getWorld().getBlockState(positionUsed.east());
-                    BlockState stateXWest = context.getWorld().getBlockState(positionUsed.east());
-
-                    if (isValuableBlock(stateXEast)) {
-                        outputValuableCoordinates(positionUsed.east(x), player, stateXEast.getBlock());
-                        foundBlock = true;
-
-                        break;
-                    }
-                    else if (isValuableBlock(stateXWest)) {
-                        outputValuableCoordinates(positionUsed.west(x), player, stateXWest.getBlock());
-                        foundBlock = true;
-
-                        break;
-                    }
-                }
 
                 if (isValuableBlock(stateY)) {
                     outputValuableCoordinates(positionUsed.down(y), player, stateY.getBlock());
@@ -84,36 +64,36 @@ public class OreDetectorItem extends Item {
     private void outputValuableCoordinates(BlockPos pos, PlayerEntity player, Block block) {
         String message = (
             "Found " + block.asItem().getName().getString() + " at " +
-                "(" + pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + ")."
+            "(" + pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + ")."
         );
 
         player.sendMessage(Text.literal(message), false);
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return (
-            state.getBlock() == MCABlocks.RUBY_ORE ||
-            state.getBlock() == MCABlocks.DEEPSLATE_RUBY_ORE ||
-            state.getBlock() == Blocks.COAL_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_COAL_ORE ||
-            state.getBlock() == Blocks.COPPER_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_COPPER_ORE ||
-            state.getBlock() == Blocks.IRON_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_IRON_ORE ||
-            state.getBlock() == Blocks.GOLD_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_GOLD_ORE ||
-            state.getBlock() == Blocks.DIAMOND_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE ||
-            state.getBlock() == Blocks.EMERALD_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE ||
-            state.getBlock() == Blocks.LAPIS_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_LAPIS_ORE ||
-            state.getBlock() == Blocks.REDSTONE_ORE ||
-            state.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE ||
-            state.getBlock() == Blocks.NETHER_GOLD_ORE ||
-            state.getBlock() == Blocks.NETHER_QUARTZ_ORE
-        );
-        //state.isIn(MCATags.Blocks.ORE_DETECTOR_DETECTABLE_BLOCKS);
+//        return (
+//            state.getBlock() == MCABlocks.RUBY_ORE ||
+//            state.getBlock() == MCABlocks.DEEPSLATE_RUBY_ORE ||
+//            state.getBlock() == Blocks.COAL_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_COAL_ORE ||
+//            state.getBlock() == Blocks.COPPER_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_COPPER_ORE ||
+//            state.getBlock() == Blocks.IRON_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_IRON_ORE ||
+//            state.getBlock() == Blocks.GOLD_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_GOLD_ORE ||
+//            state.getBlock() == Blocks.DIAMOND_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE ||
+//            state.getBlock() == Blocks.EMERALD_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_EMERALD_ORE ||
+//            state.getBlock() == Blocks.LAPIS_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_LAPIS_ORE ||
+//            state.getBlock() == Blocks.REDSTONE_ORE ||
+//            state.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE ||
+//            state.getBlock() == Blocks.NETHER_GOLD_ORE ||
+//            state.getBlock() == Blocks.NETHER_QUARTZ_ORE
+//        );
+        return state.isIn(MCATags.Blocks.ORE_DETECTOR_DETECTABLE_BLOCKS);
     }
 
     @Override

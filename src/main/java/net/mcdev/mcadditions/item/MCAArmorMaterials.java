@@ -1,13 +1,13 @@
 package net.mcdev.mcadditions.item;
 
-import net.mcdev.mcadditions.MCAdditions;
+import java.util.function.Supplier;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-
-import java.util.function.Supplier;
+import net.mcdev.mcadditions.MCAdditions;
+import net.mcdev.mcadditions.item.MCAItems;
 
 public enum MCAArmorMaterials implements ArmorMaterial {
     RUBY(
@@ -16,7 +16,7 @@ public enum MCAArmorMaterials implements ArmorMaterial {
         SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(MCAItems.RUBY)
     );
 
-    private static final int[] BASE_DURABILITY = { 11, 16, 15, 13 };
+    private static final int[] BASE_DURABILITY = { 13, 16, 14, 13 };
 
     private final String name;
     private final int durability;

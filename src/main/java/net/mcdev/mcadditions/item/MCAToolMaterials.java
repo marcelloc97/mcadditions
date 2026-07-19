@@ -1,10 +1,11 @@
 package net.mcdev.mcadditions.item;
 
+import java.util.function.Supplier;
+
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-import java.util.function.Supplier;
 
 public enum MCAToolMaterials implements ToolMaterial {
     RUBY(

@@ -5,6 +5,10 @@
   "tooltip.mcadditions.ore_detector.line1": "Detects almost all ores below the block when used.",
   "tooltip.mcadditions.ore_detector.line2": "Has a range of 32 blocks.",
 
+  "item.mcadditions.essence_extractor": "Essence Extractor",
+  "item.mcadditions.essence_extractor_full": "Essence Extractor Full",
+  "tooltip.mcadditions.essence_extractor": "Extracts the dark essence of a monster.",
+
   "item.mcadditions.ruby_scepter": "Ruby Scepter",
 
   "item.mcadditions.ruby_sword": "Ruby Sword",

@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
@@ -28,20 +29,25 @@ public class RubyScepter extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
-        user.setCurrentHand(hand);
-        user.addStatusEffect(
-            new StatusEffectInstance(
-                StatusEffects.FIRE_RESISTANCE, MCAUtils.getTicksBySeconds(30),
-                0, false, false, true
-            ),
-            null
-        );
+        if (itemStack.getDamage() > 1) {
+            user.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_HIT, 1.0F, 1.0F);
 
-        itemStack.damage(
-            1,
-            user,
-            playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand())
-        );
+            user.addStatusEffect(
+                new StatusEffectInstance(
+                    StatusEffects.FIRE_RESISTANCE, MCAUtils.getTicksBySeconds(30),
+                    0, false, false, true
+                ),
+                null
+            );
+
+            itemStack.damage(
+                1,
+                user,
+                playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand())
+            );
+        }
+        else
+            user.playSound(SoundEvents.BLOCK_DISPENSER_FAIL, 1.0F, 1.0F);
 
         return TypedActionResult.success(itemStack);
     }

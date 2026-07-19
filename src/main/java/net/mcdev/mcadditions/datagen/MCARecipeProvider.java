@@ -8,10 +8,16 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -61,6 +67,12 @@ public class MCARecipeProvider extends FabricRecipeProvider {
     }
 
     private void generateShapelessItemsRecipes(Consumer<RecipeJsonProvider> exporter) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, MCAItems.DARK_ESSENCE)
+            .input(Items.EGG)
+            .input(MCAItems.ESSENCE_EXTRACTOR)
+            .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+            .criterion(hasItem(MCAItems.ESSENCE_EXTRACTOR), conditionsFromItem(MCAItems.ESSENCE_EXTRACTOR))
+            .offerTo(exporter, new Identifier(getRecipeName(MCAItems.DARK_ESSENCE)));
     }
 
     private void generateShapelessBlocksRecipes(Consumer<RecipeJsonProvider> exporter) {
@@ -266,8 +278,10 @@ public class MCARecipeProvider extends FabricRecipeProvider {
         // Cobweb to String
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STRING, 5)
             .input(Blocks.COBWEB)
+            .input(Items.SHEARS)
             .criterion(hasItem(Blocks.COBWEB), conditionsFromItem(Blocks.COBWEB))
-            .offerTo(exporter, new Identifier(getRecipeName(Items.STRING)));
+            .criterion(hasItem(Items.SHEARS), conditionsFromItem(Items.SHEARS))
+            .offerTo(exporter, new Identifier(getRecipeName(Items.STRING) + "_cobweb"));
 
         // Mob Spawner
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPAWNER)
@@ -280,14 +294,6 @@ public class MCARecipeProvider extends FabricRecipeProvider {
             .criterion(hasItem(MCAItems.DARK_ESSENCE), conditionsFromItem(MCAItems.DARK_ESSENCE))
             .offerTo(exporter, new Identifier(getRecipeName(Blocks.SPAWNER)));
 
-        // Mob Spawner with Monster
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.SPAWNER, 1)
-//            .input(Blocks.SPAWNER)
-//            .input(MCAItems.DARK_ESSENCE)
-//            .criterion(hasItem(Blocks.SPAWNER), conditionsFromItem(Blocks.SPAWNER))
-//            .criterion(hasItem(MCAItems.DARK_ESSENCE), conditionsFromItem(MCAItems.DARK_ESSENCE))
-//            .offerTo(exporter, new Identifier(getRecipeName(Items.STRING)));
-
 
         // Saddle
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.SADDLE)
@@ -299,16 +305,6 @@ public class MCARecipeProvider extends FabricRecipeProvider {
             .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
             .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
             .offerTo(exporter, new Identifier(getRecipeName(Items.SADDLE)));
-
-        // Leather Horse Armor
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.LEATHER_HORSE_ARMOR)
-//            .pattern("  L")
-//            .pattern("LWL")
-//            .pattern("LLL")
-//            .input('L', Items.LEATHER)
-//            .input('W', ItemTags.WOOL)
-//            .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
-//            .offerTo(exporter, new Identifier(getRecipeName(Items.LEATHER_HORSE_ARMOR)));
 
         // Iron Horse Armor
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Items.IRON_HORSE_ARMOR)
