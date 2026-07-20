@@ -34,7 +34,7 @@ public class MCAItems {
 
     public static final Item RUBY_SCEPTER = registerItem(
         "ruby_scepter",
-        new RubyScepter(new FabricItemSettings().maxCount(1).maxDamage(8))
+        new RubyScepter(MCAToolMaterials.RUBY, 2, 0, new FabricItemSettings().maxCount(1))
     );
 
     public static final Item ESSENCE_EXTRACTOR = registerItem(
