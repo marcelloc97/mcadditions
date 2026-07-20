@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.RecipeType;
+//import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
@@ -41,6 +41,7 @@ public class StringWoolRecipe extends AbstractCustomRecipe {
 
     @Override
     public DefaultedList<ItemStack> getRemainder(RecipeInputInventory inventory) {
+        MCAdditions.LOGGER.info("getRemainder chamado!"); // <-- log temporário
         DefaultedList<ItemStack> remainder = DefaultedList.ofSize(inventory.size(), ItemStack.EMPTY);
 
         for (int i = 0; i < inventory.size(); i++) {
@@ -66,8 +67,8 @@ public class StringWoolRecipe extends AbstractCustomRecipe {
         return MCARecipes.STRING_WOOL_RECIPE_SERIALIZER;
     }
 
-    @Override
-    public RecipeType<?> getType() {
-        return MCARecipes.STRING_WOOL_RECIPE_TYPE;
-    }
+//    @Override
+//    public RecipeType<?> getType() {
+//        return MCARecipes.STRING_WOOL_RECIPE_TYPE;
+//    }
 }

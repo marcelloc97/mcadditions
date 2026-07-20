@@ -1,9 +1,9 @@
 {
-  "type": "mcadditions:string_cobweb",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:cobweb"
+      "tag": "minecraft:wool"
     },
     {
       "item": "minecraft:shears"
@@ -11,6 +11,6 @@
   ],
   "result": {
     "item": "minecraft:string",
-    "count": 5
+    "count": 4
   }
 }
