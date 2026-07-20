@@ -23,7 +23,7 @@ public class MCAArmorItem extends ArmorItem {
             .put(
                 MCAArmorMaterials.RUBY,
                 new StatusEffectInstance(
-                    StatusEffects.HASTE,
+                    StatusEffects.FIRE_RESISTANCE,
                     MCAUtils.getTicksBySeconds(10), 1,
                     false, false, true
                 )
