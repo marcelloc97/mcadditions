@@ -8,16 +8,10 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -274,14 +268,6 @@ public class MCARecipeProvider extends FabricRecipeProvider {
             .input('S', Items.STRING)
             .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
             .offerTo(exporter, new Identifier(getRecipeName(Blocks.COBWEB)));
-
-        // Cobweb to String
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.STRING, 5)
-            .input(Blocks.COBWEB)
-            .input(Items.SHEARS)
-            .criterion(hasItem(Blocks.COBWEB), conditionsFromItem(Blocks.COBWEB))
-            .criterion(hasItem(Items.SHEARS), conditionsFromItem(Items.SHEARS))
-            .offerTo(exporter, new Identifier(getRecipeName(Items.STRING) + "_cobweb"));
 
         // Mob Spawner
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Blocks.SPAWNER)

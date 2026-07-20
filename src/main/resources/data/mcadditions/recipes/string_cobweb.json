@@ -1,0 +1,16 @@
+{
+  "type": "mcadditions:string_cobweb",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cobweb"
+    },
+    {
+      "item": "minecraft:shears"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string",
+    "count": 5
+  }
+}
