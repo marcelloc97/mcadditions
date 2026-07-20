@@ -7,7 +7,6 @@ import net.minecraft.recipe.CraftingRecipe;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.CraftingRecipeCategory;
-import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
@@ -28,19 +27,19 @@ public class ShearsWoolRecipe implements CraftingRecipe {
     @Override
     public boolean matches(RecipeInputInventory inventory, World world) {
         boolean foundWool = false, foundShears = false;
-//        int nonEmpty = 0;
+        int nonEmpty = 0;
 
         for (int i = 0; i < inventory.size(); i++) {
             ItemStack stack = inventory.getStack(i);
 
-//            if (stack.isEmpty()) continue;
-//            nonEmpty++;
+            if (stack.isEmpty()) continue;
+            nonEmpty++;
             if (stack.isIn(ItemTags.WOOL)) foundWool = true;
             else if (stack.isOf(Items.SHEARS)) foundShears = true;
             else return false;
         }
 
-        return foundWool && foundShears;// && nonEmpty == 2;
+        return foundWool && foundShears && nonEmpty == 2;
     }
 
     @Override
