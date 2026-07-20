@@ -1,14 +1,9 @@
-# Automatically build the project and run any configured tests for every push
-# and submitted pull request. This can help catch issues that only occur on
-# certain platforms or Java versions, and provides a first line of defence
-# against bad commits.
-
 name: build
 on:
   pull_request:
   push:
     branches: ['master']
-    tags: ['release']
+    tags: ['v*']
 
 jobs:
   build:
@@ -37,7 +32,7 @@ jobs:
     needs: build
     runs-on: ubuntu-24.04
     # só roda quando o push for de uma tag no formato v*
-    if: startsWith(github.ref, 'refs/tags/release')
+    if: startsWith(github.ref, 'refs/tags/v')
     permissions:
       contents: write
     steps:
